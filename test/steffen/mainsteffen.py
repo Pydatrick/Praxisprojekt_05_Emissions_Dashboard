@@ -6,7 +6,10 @@ from pycountry_convert import country_alpha2_to_continent_code, convert_continen
 
 # --- 1. Daten laden und vorbereiten ---
 # Dein angegebener Pfad zur merged_final.csv
-CSV_FILE_PATH = Path(r"C:\Users\Admin\Desktop\Vorlesungen\1.11 Datenvisualisierung mit Python\20250714 Projekt\Projekt-Emission-Dashboard\data\merged_final.csv")
+
+ROOT = Path(__file__).resolve().parent.parent.parent
+DATA = ROOT / 'data'
+CSV_FILE_PATH = DATA / 'merged_final.csv'
 
 try:
     df = pd.read_csv(CSV_FILE_PATH)
