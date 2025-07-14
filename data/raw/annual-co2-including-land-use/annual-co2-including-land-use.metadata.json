@@ -1,0 +1,41 @@
+{
+  "chart": {
+    "title": "Annual CO₂ emissions including land-use change",
+    "subtitle": "Emissions include those from [fossil fuels and industry](#dod:fossilemissions), and land-use change. They are measured in tonnes.",
+    "note": "Emissions from land-use change can be positive or negative depending on whether carbon is emitted or sequestered.",
+    "citation": "Global Carbon Budget (2024)",
+    "originalChartUrl": "https://ourworldindata.org/grapher/annual-co2-including-land-use?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "China",
+      "Brazil",
+      "India",
+      "United Kingdom",
+      "United States",
+      "European Union (27)"
+    ]
+  },
+  "columns": {
+    "Annual CO₂ emissions including land-use change": {
+      "titleShort": "Annual CO₂ emissions including land-use change",
+      "titleLong": "Annual CO₂ emissions including land-use change",
+      "descriptionShort": "Annual total emissions of carbon dioxide (CO₂), including land-use change, measured in tonnes.",
+      "descriptionKey": [
+        "This data is based on territorial emissions, which do not account for emissions embedded in traded goods.",
+        "Emissions from international aviation and shipping are not included in any country or region's emissions. They are only included in the global total emissions."
+      ],
+      "descriptionProcessing": "- Data on global emissions has been converted from tonnes of carbon to tonnes of carbon dioxide (CO₂) using a conversion factor of 3.664.\n- Emissions from the Kuwaiti oil fires in 1991 have been included as part of Kuwait's emissions for that year.\n- Country's share of the global population is calculated using our population dataset, based on [different sources](https://ourworldindata.org/population-sources).\n- Each country's share of global CO₂ emissions from flaring has been calculated using global CO₂ emissions from flaring provided in the Global Carbon Budget dataset.\n",
+      "shortUnit": "t",
+      "unit": "tonnes",
+      "timespan": "1850-2023",
+      "type": "Numeric",
+      "owidVariableId": 998399,
+      "shortName": "emissions_total_including_land_use_change",
+      "lastUpdated": "2024-11-21",
+      "nextUpdate": "2025-11-21",
+      "citationShort": "Global Carbon Budget (2024) – with major processing by Our World in Data",
+      "citationLong": "Global Carbon Budget (2024) – with major processing by Our World in Data. “Annual CO₂ emissions including land-use change – GCB” [dataset]. Global Carbon Project, “Global Carbon Budget” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/998399.metadata.json"
+    }
+  },
+  "dateDownloaded": "2024-12-03"
+}

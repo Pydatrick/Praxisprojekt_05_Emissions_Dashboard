@@ -1,0 +1,75 @@
+{
+  "chart": {
+    "title": "Average temperature anomaly",
+    "subtitle": "Global average land-sea temperature anomaly relative to the 1961-1990 average temperature baseline.",
+    "note": "The gray lines represent the upper and lower bounds of the 95% confidence interval.",
+    "citation": "Met Office Hadley Centre (2024)",
+    "originalChartUrl": "https://ourworldindata.org/grapher/temperature-anomaly?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "Global"
+    ]
+  },
+  "columns": {
+    "Global average temperature anomaly relative to 1961-1990": {
+      "titleShort": "Mean",
+      "titleLong": "Mean",
+      "descriptionKey": [
+        "Temperature anomalies are given in degrees Celsius relative to the average temperature over the period 1961-1990.",
+        "Temperature anomalies are available for the Northern Hemisphere and the Southern Hemisphere.",
+        "The global mean is calculated by averaging anomalies for northern and southern hemispheres."
+      ],
+      "shortUnit": "°C",
+      "unit": "degrees Celsius",
+      "timespan": "1850-2024",
+      "type": "Numeric",
+      "owidVariableId": 997983,
+      "shortName": "temperature_anomaly",
+      "lastUpdated": "2024-11-18",
+      "nextUpdate": "2025-02-16",
+      "citationShort": "Met Office Hadley Centre (2024) – processed by Our World in Data",
+      "citationLong": "Met Office Hadley Centre (2024) – processed by Our World in Data. “Mean” [dataset]. Met Office Hadley Centre, “HadCRUT5 HadCRUT.5.0.2.0” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/997983.metadata.json"
+    },
+    "Upper bound of the annual temperature anomaly (95% confidence interval)": {
+      "titleShort": "Upper",
+      "titleLong": "Upper",
+      "descriptionKey": [
+        "Temperature anomalies are given in degrees Celsius relative to the average temperature over the period 1961-1990.",
+        "Temperature anomalies are available for the Northern Hemisphere and the Southern Hemisphere.",
+        "The global mean is calculated by averaging anomalies for northern and southern hemispheres."
+      ],
+      "shortUnit": "°C",
+      "unit": "degrees Celsius",
+      "timespan": "1850-2024",
+      "type": "Numeric",
+      "owidVariableId": 997978,
+      "shortName": "upper_limit",
+      "lastUpdated": "2024-11-18",
+      "nextUpdate": "2025-02-16",
+      "citationShort": "Met Office Hadley Centre (2024) – processed by Our World in Data",
+      "citationLong": "Met Office Hadley Centre (2024) – processed by Our World in Data. “Upper” [dataset]. Met Office Hadley Centre, “HadCRUT5 HadCRUT.5.0.2.0” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/997978.metadata.json"
+    },
+    "Lower bound of the annual temperature anomaly (95% confidence interval)": {
+      "titleShort": "Lower",
+      "titleLong": "Lower",
+      "descriptionKey": [
+        "Temperature anomalies are given in degrees Celsius relative to the average temperature over the period 1961-1990.",
+        "Temperature anomalies are available for the Northern Hemisphere and the Southern Hemisphere.",
+        "The global mean is calculated by averaging anomalies for northern and southern hemispheres."
+      ],
+      "shortUnit": "°C",
+      "unit": "degrees Celsius",
+      "timespan": "1850-2024",
+      "type": "Numeric",
+      "owidVariableId": 997980,
+      "shortName": "lower_limit",
+      "lastUpdated": "2024-11-18",
+      "nextUpdate": "2025-02-16",
+      "citationShort": "Met Office Hadley Centre (2024) – processed by Our World in Data",
+      "citationLong": "Met Office Hadley Centre (2024) – processed by Our World in Data. “Lower” [dataset]. Met Office Hadley Centre, “HadCRUT5 HadCRUT.5.0.2.0” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/997980.metadata.json"
+    }
+  },
+  "dateDownloaded": "2024-12-03"
+}

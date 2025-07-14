@@ -1,0 +1,105 @@
+{
+  "chart": {
+    "title": "Global aviation demand, energy efficiency and CO₂ emissions",
+    "subtitle": "",
+    "note": "Carbon emissions are measured in carbon-dioxide equivalents, without adjustment for additional warming at altitude.",
+    "citation": "Bergero et al. (2023). Pathways to net-zero emissions from aviation.",
+    "originalChartUrl": "https://ourworldindata.org/grapher/aviation-demand-efficiency?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "World"
+    ]
+  },
+  "columns": {
+    "Passenger demand": {
+      "titleShort": "Passenger demand (billion passenger-km)",
+      "titleLong": "Passenger demand (billion passenger-km)",
+      "descriptionKey": [],
+      "shortUnit": "billion-km",
+      "unit": "billion-kilometers",
+      "timespan": "1990-2021",
+      "type": "Integer",
+      "owidVariableId": 831518,
+      "shortName": "aviation_passengers_billionkm",
+      "lastUpdated": "2024-03-19",
+      "citationShort": "Bergero et al. (2023). Pathways to net-zero emissions from aviation. – processed by Our World in Data",
+      "citationLong": "Bergero et al. (2023). Pathways to net-zero emissions from aviation. – processed by Our World in Data. “Passenger demand (billion passenger-km)” [dataset]. Bergero et al. (2023). Pathways to net-zero emissions from aviation., “aviation_emissions_bergero” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/831518.metadata.json"
+    },
+    "Freight demand": {
+      "titleShort": "Freight demand (million-ton km)",
+      "titleLong": "Freight demand (million-ton km)",
+      "descriptionKey": [],
+      "shortUnit": "million-ton km",
+      "unit": "million-ton kilometers",
+      "timespan": "1990-2021",
+      "type": "NumberOrString",
+      "owidVariableId": 831519,
+      "shortName": "aviation_freight_milliontonkm",
+      "lastUpdated": "2024-03-19",
+      "citationShort": "Bergero et al. (2023). Pathways to net-zero emissions from aviation. – processed by Our World in Data",
+      "citationLong": "Bergero et al. (2023). Pathways to net-zero emissions from aviation. – processed by Our World in Data. “Freight demand (million-ton km)” [dataset]. Bergero et al. (2023). Pathways to net-zero emissions from aviation., “aviation_emissions_bergero” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/831519.metadata.json"
+    },
+    "Energy intensity": {
+      "titleShort": "Energy intensity (per passenger-km)",
+      "titleLong": "Energy intensity (per passenger-km)",
+      "descriptionKey": [],
+      "shortUnit": "MJ",
+      "unit": "MJ per passenger-km",
+      "timespan": "1990-2021",
+      "type": "Numeric",
+      "owidVariableId": 831521,
+      "shortName": "aviation_energy_intensity",
+      "lastUpdated": "2024-03-19",
+      "citationShort": "Bergero et al. (2023). Pathways to net-zero emissions from aviation. – processed by Our World in Data",
+      "citationLong": "Bergero et al. (2023). Pathways to net-zero emissions from aviation. – processed by Our World in Data. “Energy intensity (per passenger-km)” [dataset]. Bergero et al. (2023). Pathways to net-zero emissions from aviation., “aviation_emissions_bergero” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/831521.metadata.json"
+    },
+    "Carbon per unit energy": {
+      "titleShort": "CO₂ per unit energy (gCO₂eq per MJ)",
+      "titleLong": "CO₂ per unit energy (gCO₂eq per MJ)",
+      "descriptionKey": [],
+      "shortUnit": "gCO2/MJ",
+      "unit": "grams CO2e per MJ",
+      "timespan": "1990-2021",
+      "type": "Numeric",
+      "owidVariableId": 831520,
+      "shortName": "aviation_carbon_per_energy",
+      "lastUpdated": "2024-03-19",
+      "citationShort": "Bergero et al. (2023). Pathways to net-zero emissions from aviation. – processed by Our World in Data",
+      "citationLong": "Bergero et al. (2023). Pathways to net-zero emissions from aviation. – processed by Our World in Data. “CO₂ per unit energy (gCO₂eq per MJ)” [dataset]. Bergero et al. (2023). Pathways to net-zero emissions from aviation., “aviation_emissions_bergero” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/831520.metadata.json"
+    },
+    "Carbon intensity": {
+      "titleShort": "CO₂ intensity (gCO₂ per passenger-km)",
+      "titleLong": "CO₂ intensity (gCO₂ per passenger-km)",
+      "descriptionKey": [],
+      "shortUnit": "gCO2",
+      "unit": "grams CO2 per passenger-km",
+      "timespan": "1990-2021",
+      "type": "Numeric",
+      "owidVariableId": 831522,
+      "shortName": "aviation_carbon_intensity",
+      "lastUpdated": "2024-03-19",
+      "citationShort": "Bergero et al. (2023). Pathways to net-zero emissions from aviation. – processed by Our World in Data",
+      "citationLong": "Bergero et al. (2023). Pathways to net-zero emissions from aviation. – processed by Our World in Data. “CO₂ intensity (gCO₂ per passenger-km)” [dataset]. Bergero et al. (2023). Pathways to net-zero emissions from aviation., “aviation_emissions_bergero” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/831522.metadata.json"
+    },
+    "CO2 emissions": {
+      "titleShort": "CO₂ emissions (billion tonnes)",
+      "titleLong": "CO₂ emissions (billion tonnes)",
+      "descriptionKey": [],
+      "shortUnit": "Gt",
+      "unit": "billion tonnes",
+      "timespan": "1990-2021",
+      "type": "Numeric",
+      "owidVariableId": 831524,
+      "shortName": "aviation_co2",
+      "lastUpdated": "2024-03-19",
+      "citationShort": "Bergero et al. (2023). Pathways to net-zero emissions from aviation. – processed by Our World in Data",
+      "citationLong": "Bergero et al. (2023). Pathways to net-zero emissions from aviation. – processed by Our World in Data. “CO₂ emissions (billion tonnes)” [dataset]. Bergero et al. (2023). Pathways to net-zero emissions from aviation., “aviation_emissions_bergero” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/831524.metadata.json"
+    }
+  },
+  "dateDownloaded": "2024-12-03"
+}
