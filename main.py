@@ -1,8 +1,9 @@
-# verbindet layout und callbacks
-
 from app import app
 from layout.main_layout import create_layout
-import callbacks.callback_test  # nur um Callback-Registrierung zu triggern
+
+# WICHTIG, damit dash die callbacks kennt
+import callbacks.router 
+import callbacks.sidebar_toggle
 
 app.layout = create_layout()
 
