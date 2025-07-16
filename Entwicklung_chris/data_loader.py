@@ -1,32 +1,13 @@
 import pandas as pd
 import os
+from laender import get_unique_countries  # Dein externes Skript mit der Funktion
 
-# Beispiel-Daten für Demonstrationszwecke
-# Erstellen Sie Dummy-DataFrames, die echten CSV-Daten ähneln könnten
-def create_dummy_dataframe(name, start_year=1800, end_year=2030):
-    years = list(range(start_year, end_year + 1))
-    # Simulieren Sie unterschiedliche Emissionsmuster
-    if name == "Öl Emissionen":
-        emissions = [1000 + i * 10 + (i % 5) * 50 for i in range(len(years))]
-    elif name == "Gas Emissionen":
-        emissions = [500 + i * 20 - (i % 3) * 30 for i in range(len(years))]
-    elif name == "Kohle Emissionen":
-        emissions = [1500 - i * 15 + (i % 4) * 20 for i in range(len(years))]
-    else: # Für andere generische Daten
-        emissions = [700 + i * 5 + (i % 7) * 10 for i in range(len(years))]
 
-    return pd.DataFrame({
-        'Jahr': years,
-        'Emissionen': emissions,
-        'Quelle': name
-    })
 
-# Pfad zu deinen CSV-Dateien - DEFINIERE DIESEN unbedingt!
-
-# Pfad zu CSV-Ordner anpassen
+# Pfad zum Ordner mit den CSV-Dateien
 csv_ordner = r"C:\DataCraft\11_Datenvisualisierung\Projekt-Emission-Dashboard\data\raw"
 
-data_sources = {}
+data_sources = {}  # Muss vor Nutzung initialisiert sein
 
 def clean_columns(df):
     rename_map = {
@@ -35,51 +16,52 @@ def clean_columns(df):
         'Annual CO₂ emissions from coal': 'CO2_Coal_Emissions',
         'Annual CO₂ emissions from oil': 'CO2_Oil_Emissions',
         'Annual CO₂ emissions from gas': 'CO2_Gas_Emissions',
-        # Falls weitere Spalten wichtig sind, hier ergänzen
+        # Weitere Spalten hier ergänzen falls nötig
     }
     cols_to_rename = {k:v for k,v in rename_map.items() if k in df.columns}
     return df.rename(columns=cols_to_rename)
 
+# 1) Lade alle CSVs in data_sources dict
 for dateiname in os.listdir(csv_ordner):
     if dateiname.endswith(".csv"):
         dateipfad = os.path.join(csv_ordner, dateiname)
         df = pd.read_csv(dateipfad)
         df = clean_columns(df)
-        
+
+        # Konvertiere wichtige Spalten in numerisch (falls vorhanden)
         if 'Year' in df.columns:
             df['Year'] = pd.to_numeric(df['Year'], errors='coerce')
         for col in ['CO2_Coal_Emissions', 'CO2_Oil_Emissions', 'CO2_Gas_Emissions']:
             if col in df.columns:
                 df[col] = pd.to_numeric(df[col], errors='coerce')
-                
+
         critical_cols = ['Country', 'Year']
         critical_cols += [c for c in ['CO2_Coal_Emissions', 'CO2_Oil_Emissions', 'CO2_Gas_Emissions'] if c in df.columns]
         df.dropna(subset=critical_cols, inplace=True)
-        
+
         key = os.path.splitext(dateiname)[0]
         data_sources[key] = df
 
+def get_all_unique_countries(data_sources):
+    countries = set()
+    for df in data_sources.values():
+        countries.update(df['Country'].unique())
+    return sorted(countries)
 
-# Optional: Eine Funktion, um die Spaltennamen anzupassen oder Daten zu bereinigen,
-# falls Ihre CSVs unterschiedliche Formate haben.
-# def preprocess_dataframe(df, source_name):
-#     # Beispiel: Sicherstellen, dass 'Jahr' und 'Emissionen' Spalten existieren
-#     # und ggf. umbenennen
-#     if 'Year' in df.columns:
-#         df = df.rename(columns={'Year': 'Jahr'})
-#     if 'CO2_Emissions' in df.columns:
-#         df = df.rename(columns={'CO2_Emissions': 'Emissionen'})
-#     df['Quelle'] = source_name # Eine Spalte für die Quelle hinzufügen
-#     return df
+# 2) Nun alle Länder aus allen CSVs holen
+all_countries = get_all_unique_countries(data_sources)
+print(f"Länder in allen CSVs: {len(all_countries)}")
 
-# # Wenn Sie die Preprocessing-Funktion verwenden möchten, würden Sie data_sources so laden:
-# data_sources_processed = {
-#     key: preprocess_dataframe(pd.read_csv(path), key)
-#     for key, path in {
-#         "Öl Emissionen (annual-co-emissions-from-oil_copy.csv)": "C:/DataCraft/11 Datenvisualisierung/Projekt-Emission-Dashboard/Entwicklung_chris/annual-co-emissions-from-oil_copy.csv",
-#         "Gas Emissionen (annual-co-emissions-from-gas.csv)": "C:/DataCraft/11 Datenvisualisierung/Projekt-Emission-Dashboard/Entwicklung_chris/annual-co-emissions-from-gas.csv",
-#         "Kohle Emissionen (annual-co-emissions-from-coal.csv)": "C:/DataCraft/11 Datenvisualisierung/Projekt-Emission-Dashboard/Entwicklung_chris/annual-co-emissions-from-coal.csv",
-#         # ... weitere Dateien mit ihren Pfaden
-#     }.items()
-# }
-# data_sources = data_sources_processed # Dann diese Zeile verwenden
+# 3) Optional: Beispiel, wie du Länder aus einer repräsentativen CSV liest
+repr_csv = None
+for fname in os.listdir(csv_ordner):
+    if fname.endswith(".csv"):
+        repr_csv = os.path.join(csv_ordner, fname)
+        break
+
+if repr_csv:
+    countries_in_data = get_unique_countries(repr_csv)
+else:
+    countries_in_data = []
+
+print(f"Länder in der CSV-Datenquelle (repräsentative Datei): {len(countries_in_data)} Länder gefunden.")
