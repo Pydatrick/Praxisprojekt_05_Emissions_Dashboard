@@ -21,44 +21,16 @@ def create_dummy_dataframe(name, start_year=1800, end_year=2030):
         'Quelle': name
     })
 
-# Pfad zu deinen CSV-Dateien - DEFINIERE DIESEN unbedingt!
-
-# Pfad zu CSV-Ordner anpassen
-csv_ordner = r"C:\DataCraft\11_Datenvisualisierung\Projekt-Emission-Dashboard\data\raw"
-
-data_sources = {}
-
-def clean_columns(df):
-    rename_map = {
-        'Entity': 'Country',
-        'Year': 'Year',
-        'Annual CO₂ emissions from coal': 'CO2_Coal_Emissions',
-        'Annual CO₂ emissions from oil': 'CO2_Oil_Emissions',
-        'Annual CO₂ emissions from gas': 'CO2_Gas_Emissions',
-        # Falls weitere Spalten wichtig sind, hier ergänzen
-    }
-    cols_to_rename = {k:v for k,v in rename_map.items() if k in df.columns}
-    return df.rename(columns=cols_to_rename)
-
-for dateiname in os.listdir(csv_ordner):
-    if dateiname.endswith(".csv"):
-        dateipfad = os.path.join(csv_ordner, dateiname)
-        df = pd.read_csv(dateipfad)
-        df = clean_columns(df)
-        
-        if 'Year' in df.columns:
-            df['Year'] = pd.to_numeric(df['Year'], errors='coerce')
-        for col in ['CO2_Coal_Emissions', 'CO2_Oil_Emissions', 'CO2_Gas_Emissions']:
-            if col in df.columns:
-                df[col] = pd.to_numeric(df[col], errors='coerce')
-                
-        critical_cols = ['Country', 'Year']
-        critical_cols += [c for c in ['CO2_Coal_Emissions', 'CO2_Oil_Emissions', 'CO2_Gas_Emissions'] if c in df.columns]
-        df.dropna(subset=critical_cols, inplace=True)
-        
-        key = os.path.splitext(dateiname)[0]
-        data_sources[key] = df
-
+# Laden der "Datenquellen" in ein Dictionary
+# Die Schlüssel des Dictionaries werden später die Optionen im Dropdown sein
+# In einer echten Anwendung würden Sie hier pd.read_csv verwenden
+# und die tatsächlichen Pfade zu Ihren CSV-Dateien angeben.
+data_sources = {
+    "kohle_emissionen": pd.read_csv("C:/DataCraft/11_Datenvisualisierung/Projekt-Emission-Dashboard/data/raw/annual-co-emissions-from-coal.csv"),
+    "gas_emissionen": pd.read_csv("C:/DataCraft/11_Datenvisualisierung/Projekt-Emission-Dashboard/data/raw/annual-co-emissions-from-gas.csv"),
+    "öl_emissionen": pd.read_csv("C:/DataCraft/11_Datenvisualisierung/Projekt-Emission-Dashboard/data/raw/annual-co-emissions-from-oil.csv"),
+    # ... und so weiter für Ihre 10 CSVs
+}
 
 # Optional: Eine Funktion, um die Spaltennamen anzupassen oder Daten zu bereinigen,
 # falls Ihre CSVs unterschiedliche Formate haben.
