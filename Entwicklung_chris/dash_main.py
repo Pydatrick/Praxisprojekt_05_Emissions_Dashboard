@@ -158,12 +158,14 @@ def update_countries(kontinente_auswahl):
         return [], []
     if isinstance(kontinente_auswahl, str):
         kontinente_auswahl = [kontinente_auswahl]
+
     länder = []
     for k in kontinente_auswahl:
         länder.extend(get_countries_by_continent(k))
-    länder = sorted(set(länder))[:5]  # max 5 Länder
+
+    länder = sorted(set(länder))  # alle Länder ohne Limit
     options = [{'label': land, 'value': land} for land in länder]
-    values = länder[:5] if länder else []
+    values = []  # Oder z.B. länder[:5] für vorausgewählte Länder
     return options, values
 
 
