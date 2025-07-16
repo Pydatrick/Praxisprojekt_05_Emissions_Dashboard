@@ -2,6 +2,7 @@ import dash
 from dash import html
 from dash import dcc
 from dash.dependencies import Input, Output
+import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 import os # Nützlich, um Dateinamen zu extrahieren oder mit Pfaden zu arbeiten
@@ -108,28 +109,6 @@ def update_graph_and_title(selected_source_key, selected_years):
     new_title = f"Dashboard: {selected_source_key}"
 
     return fig, new_title
-
-# Erstellen der Grafik 2
-    # Hier könnten Sie je nach Quelle unterschiedliche Diagrammtypen wählen
-    fig = px.line(
-        filtered_df,
-        # von hier an einen Platzhalter schaffen für die Grafiken
-        x='Year',
-        y=filtered_df.columns[2],
-        # bis hier
-        title=f'{selected_source_key} über die Jahre',
-        labels={'Year': 'Year', filtered_df.columns[2]: filtered_df.columns[2]}
-    )
-    fig.update_layout(transition_duration=500) # Sanfte Übergänge beim Aktualisieren
-
-    # Aktualisieren der Hauptüberschrift basierend auf der Auswahl
-    new_title = f"Dashboard: {selected_source_key}"
-
-    return fig, new_title
-
-
-
-
 
 # --- App starten ---
 if __name__ == '__main__':

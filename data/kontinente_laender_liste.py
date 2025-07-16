@@ -154,7 +154,7 @@ country_to_continent_map = {
     "Ukraine": "Europe",
     "United Kingdom": "Europe",
     "Holy See": "Europe",
-    "Faroe Islands": "Europe", # Hinzugefügt
+    "Faroe Islands": "Europe",
 
     "Antigua and Barbuda": "North America",
     "Bahamas": "North America",
@@ -185,7 +185,7 @@ country_to_continent_map = {
     "British Virgin Islands": "North America",
     "Curacao": "North America",
     "Greenland": "North America",
-    "Grenada": "North America", # Hinzugefügt
+    "Grenada": "North America",
     "Montserrat": "North America",
     "Saint Pierre and Miquelon": "North America",
     "Sint Maarten (Dutch part)": "North America",
@@ -253,6 +253,23 @@ country_to_continent_map = {
     "World": "Global Aggregates",
     "Hong Kong": "Asia",
     "Macao": "Asia",
+    "Entity": "Global Aggregates",
+    "Africa (GCP)": "Global Aggregates",
+    "Asia (GCP)": "Global Aggregates",
+    "Central America (GCP)": "Global Aggregates",
+    "Europe (GCP)": "Global Aggregates",
+    "Kuwaiti Oil Fires": "Global Aggregates",
+    "Least developed countries (Jones et al.)": "Global Aggregates",
+    "Middle East (GCP)": "Global Aggregates",
+    "Non-OECD (GCP)": "Global Aggregates",
+    "North America (GCP)": "Global Aggregates",
+    "OECD (GCP)": "Global Aggregates",
+    "OECD (Jones et al.)": "Global Aggregates",
+    "Oceania (GCP)": "Global Aggregates",
+    "Ryukyu Islands": "Asia",
+    "Ryukyu Islands (GCP)": "Asia",
+    "South America (GCP)": "Global Aggregates",
+    "Vatican": "Europe"
 }
 
 print("--- DEBUG: kontinente_laender_liste.py wurde erfolgreich geladen. ---")
