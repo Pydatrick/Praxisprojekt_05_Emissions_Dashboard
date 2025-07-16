@@ -272,11 +272,11 @@ country_to_continent_map = {
     "Vatican": "Europe"
 }
 
-print("--- DEBUG: kontinente_laender_liste.py wurde erfolgreich geladen. ---")
-print(f"DEBUG: 'Democratic Republic of Congo' in map? {'Democratic Republic of Congo' in country_to_continent_map}")
-print(f"DEBUG: 'Faroe Islands' in map? {'Faroe Islands' in country_to_continent_map}")
-print(f"DEBUG: 'Grenada' in map? {'Grenada' in country_to_continent_map}")
-print(f"DEBUG: Die Map hat {len(country_to_continent_map)} Einträge.")
+# print("--- DEBUG: kontinente_laender_liste.py wurde erfolgreich geladen. ---")
+# print(f"DEBUG: 'Democratic Republic of Congo' in map? {'Democratic Republic of Congo' in country_to_continent_map}")
+# print(f"DEBUG: 'Faroe Islands' in map? {'Faroe Islands' in country_to_continent_map}")
+# print(f"DEBUG: 'Grenada' in map? {'Grenada' in country_to_continent_map}")
+# print(f"DEBUG: Die Map hat {len(country_to_continent_map)} Einträge.")
 
 
 

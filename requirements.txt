@@ -3,4 +3,3 @@ dash
 plotly
 matplotlib
 pathlib
-pycountry_convert
