@@ -4,6 +4,10 @@ from layout.main_layout import create_layout
 # WICHTIG, damit dash die callbacks kennt
 import callbacks.router 
 import callbacks.sidebar_toggle
+import callbacks.coal_plot
+# import callbacks.gas_plot
+# import callbacks.land_use_plot
+# import callbacks.oil_plot
 
 app.layout = create_layout()
 
