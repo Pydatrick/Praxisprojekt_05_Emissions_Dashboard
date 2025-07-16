@@ -4,6 +4,7 @@ from app import app
 from pages.coal import layout_coal
 from pages.gas import layout_gas
 from pages.oil import layout_oil
+from pages.kuhpups import layout_kuhpups
 
 @app.callback(
     Output('main-content', 'children'),
@@ -13,7 +14,8 @@ def display_page(pathname):
     pages = {
         "/coal": layout_coal,
         "/gas": layout_gas,
-        "/oil": layout_oil
+        "/oil": layout_oil,
+        "/kuhpups": layout_kuhpups
     }
     layout_func = pages.get(pathname)
     if layout_func:
