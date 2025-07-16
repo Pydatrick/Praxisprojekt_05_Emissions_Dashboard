@@ -34,10 +34,15 @@ body, html, #root, .app-container {
 }
 
 .toggle-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1101;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.sidebar.collapsed #sidebar-content {
+    display: none;
 }
 
 /* --- Navigationslinks --- */
