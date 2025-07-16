@@ -6,9 +6,11 @@ from layout.sidebar import create_sidebar
 def create_layout():
     return html.Div([
         dcc.Location(id='url', refresh=False),
-        create_header(),
-        html.Div([
-            create_sidebar(),
-            html.Div(id='main-content', className='main-content')
-        ], className='content')
+        
+        create_header(),  # bleibt oben
+        
+        html.Div([        # flex-container
+            create_sidebar(),  # linke spalte
+            html.Div(id='main-content', className="main-content")  # rechte spalte
+        ], className="content-container")
     ])
