@@ -101,3 +101,5 @@ def update_bar_plot(selected_entities, year_range):
     fig.update_layout(xaxis_tickangle=-45)
 
     return fig
+
+# graph 3

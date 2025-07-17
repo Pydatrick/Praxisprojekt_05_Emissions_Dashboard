@@ -5,6 +5,8 @@ def create_sidebar():
         html.Button("☰", id="toggle-button", n_clicks=0, className="toggle-btn"),
         html.Div([
             html.H2("Navigation"),
+            html.A("Übersicht Emission ", href="/total"),
+            html.Br(),
             html.A("Emission Coal", href="/coal"),
             html.Br(),
             html.A("Emission Gas", href="/gas"),

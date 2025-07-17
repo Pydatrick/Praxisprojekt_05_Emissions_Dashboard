@@ -2,19 +2,19 @@ from dash import html, dcc
 from pathlib import Path
 from data.data_loader import get_countries, get_year_range, get_preselection
 
-def layout_gas():
+def layout_total():
 
     ROOT = Path(__file__).resolve().parent.parent
-    PATH_TO_CSV = ROOT / 'data' / 'raw' / 'annual-co-emissions-from-gas.csv'
+    PATH_TO_CSV = ROOT / 'data' / 'raw' / 'annual-co-emissions-including-land-use-change.csv'
 
     entities = get_countries(PATH_TO_CSV)
     preselection_options = get_preselection(PATH_TO_CSV)
     year_min, year_max = get_year_range(PATH_TO_CSV)
 
     return html.Div([
-        html.H1("CO₂-Emissionen aus Kohle nach Ländern"),
+        html.H1("Gesamte CO₂-Emissionen (Fossil) nach Ländern"),
         dcc.Dropdown(
-            id='preselection-dropdown',
+            id='total-preselection-dropdown',
             options=preselection_options,
             placeholder = 'Treffe eine Vorauswahl',
             multi=True,
@@ -22,7 +22,7 @@ def layout_gas():
             style={'margin-bottom': '15px'}
         ),
         dcc.Dropdown(
-            id='coal-entity-dropdown',
+            id='total-entity-dropdown',
             options=[{'label': entity, 'value': entity} for entity in entities],
             placeholder="Wähle eine oder mehrere Entität(en)",
             multi=True,
@@ -33,7 +33,7 @@ def layout_gas():
         html.Div([
         html.Label("Jahresbereich auswählen:", style = {'fontWeight' : 'bold'}),
         dcc.RangeSlider(
-            id='coal-year-slider',
+            id='total-year-slider',
             min=year_min,
             max=year_max,
             value=[year_min, year_max],
@@ -44,17 +44,18 @@ def layout_gas():
                  ),
         
         html.Div([
-            dcc.Graph(id='coal-line-plot'),
-            dcc.Graph(id='graph-2'),
+        dcc.Graph(id='total-emission-line-plot'),
+        dcc.Graph(id='total-contribution-line-plot'),
+        dcc.Graph(
+                id='temperature-line-plot',
+                style={'gridColumn': '1 / span 2'} 
+            ),
         ], style={
             'display': 'grid',
             'gridTemplateColumns': '50% 50%',
             'gridGap': '15px',
-            'padding': '10px 50px 50px 50px'
-        }),
-        html.Div([
-            dcc.Graph(id='graph-3'),
-        ])
+           # 'padding': '10px 50px 50px 50px'
+        })
     ], id='main-content', style={'margin-left': '0', 'transition': 'margin-left 0.3s'})
 
     

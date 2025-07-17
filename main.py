@@ -8,6 +8,7 @@ import callbacks.coal_plot
 # import callbacks.gas_plot
 # import callbacks.land_use_plot
 # import callbacks.oil_plot
+import callbacks.total
 
 app.layout = create_layout()
 
