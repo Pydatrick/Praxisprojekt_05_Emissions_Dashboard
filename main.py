@@ -5,9 +5,9 @@ from layout.main_layout import create_layout
 import callbacks.router 
 import callbacks.sidebar_toggle
 import callbacks.coal_plot
-# import callbacks.gas_plot
-# import callbacks.land_use_plot
-# import callbacks.oil_plot
+import callbacks.gas_plot
+import callbacks.landuse_plot
+import callbacks.oil_plot
 
 app.layout = create_layout()
 

@@ -63,7 +63,7 @@ def update_graph(selected_entities, year_range):
 
 #callback coal comulated bar plot
 @app.callback(
-    Output('graph-2', 'figure'),
+    Output('coal-bar-plot', 'figure'),
     Input('coal-entity-dropdown', 'value'),
     Input('coal-year-slider', 'value')
 )

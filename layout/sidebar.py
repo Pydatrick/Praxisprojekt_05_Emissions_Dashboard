@@ -11,6 +11,6 @@ def create_sidebar():
             html.Br(),
             html.A("Emission Oil", href="/oil"),
             html.Br(),
-            html.A("Emission kuhpups", href="/kuhpups"),
+            html.A("Emission landuse", href="/landuse"),
         ], id="sidebar-content"),
     ], id="sidebar", className="sidebar expanded")
