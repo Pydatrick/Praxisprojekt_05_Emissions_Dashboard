@@ -94,7 +94,7 @@ def update_bar_plot(selected_entities, year_range):
         y="value",
         color = 'country',
         color_discrete_map=color_map,
-        labels={"value": "Gesamtemissionen", "country": "Entität"},
+        labels={"value": "Gesamtemissionen", "country": ""},
         title="Kumulierte Emissionen über gewählten Zeitraum"
     )
 
