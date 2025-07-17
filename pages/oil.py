@@ -12,7 +12,7 @@ def layout_oil():
     year_min, year_max = get_year_range(PATH_TO_CSV)
 
     return html.Div([
-        html.H1("CO₂-Emissionen aus Oil nach Ländern"),
+        html.H1("CO₂-Emissionen aus Öl nach Ländern"),
         dcc.Dropdown(
             id='oil-preselection-dropdown',
             options=preselection_options,
