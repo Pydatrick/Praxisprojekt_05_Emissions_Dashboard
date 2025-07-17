@@ -8,7 +8,7 @@ from functions.set_color_map import generate_color_map
 #callback continent/country
 @app.callback(
     Output('gas-entity-dropdown', 'options'),
-    Input('preselection-dropdown', 'value'),
+    Input('gas-preselection-dropdown', 'value'),
 )
 def update_countries(preselection):
     

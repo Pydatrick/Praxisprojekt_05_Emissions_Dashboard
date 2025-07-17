@@ -14,7 +14,7 @@ def layout_oil():
     return html.Div([
         html.H1("CO₂-Emissionen aus Oil nach Ländern"),
         dcc.Dropdown(
-            id='preselection-dropdown',
+            id='oil-preselection-dropdown',
             options=preselection_options,
             placeholder = 'Treffe eine Vorauswahl',
             multi=True,

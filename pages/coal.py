@@ -14,7 +14,7 @@ def layout_coal():
     return html.Div([
         html.H1("CO₂-Emissionen aus Kohle nach Ländern"),
         dcc.Dropdown(
-            id='preselection-dropdown',
+            id='coal-preselection-dropdown',
             options=preselection_options,
             placeholder = 'Treffe eine Vorauswahl',
             multi=True,

@@ -14,7 +14,7 @@ def layout_gas():
     return html.Div([
         html.H1("CO₂-Emissionen aus Gas nach Ländern"),
         dcc.Dropdown(
-            id='preselection-dropdown',
+            id='gas-preselection-dropdown',
             options=preselection_options,
             placeholder = 'Treffe eine Vorauswahl',
             multi=True,

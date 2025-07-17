@@ -14,7 +14,7 @@ def layout_landuse():
     return html.Div([
         html.H1("CO₂-Emissionen aus Landwirtschaft nach Ländern"),
         dcc.Dropdown(
-            id='preselection-dropdown',
+            id='landuse-preselection-dropdown',
             options=preselection_options,
             placeholder = 'Treffe eine Vorauswahl',
             multi=True,

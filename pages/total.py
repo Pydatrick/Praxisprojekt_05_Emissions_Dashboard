@@ -5,7 +5,7 @@ from data.data_loader import get_countries, get_year_range, get_preselection
 def layout_total():
 
     ROOT = Path(__file__).resolve().parent.parent
-    PATH_TO_CSV = ROOT / 'data' / 'raw' / 'annual-co-emissions-including-land-use-change.csv'
+    PATH_TO_CSV = ROOT / 'data' / 'raw' / 'annual-co-emissions.csv'
 
     entities = get_countries(PATH_TO_CSV)
     preselection_options = get_preselection(PATH_TO_CSV)
