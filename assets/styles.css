@@ -9,6 +9,7 @@ body, html, #root, .app-container {
 /* --- Header --- */
 .header {
     background-color: #2c3e50; /* #2c3e50 */
+    text-align: center;
     color: white;
     padding: 20px;
 }
@@ -64,3 +65,4 @@ body, html, #root, .app-container {
     background-color: #ffffff;
     overflow-y: auto;
 }
+

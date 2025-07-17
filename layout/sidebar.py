@@ -14,5 +14,7 @@ def create_sidebar():
             html.A("Emission Oil", href="/oil"),
             html.Br(),
             html.A("Emission landuse", href="/landuse"),
+            html.Br(),
+            html.A("Emission pro Kopf", href="/per_capita"),
         ], id="sidebar-content"),
     ], id="sidebar", className="sidebar expanded")

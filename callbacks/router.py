@@ -7,6 +7,7 @@ from pages.gas import layout_gas
 from pages.oil import layout_oil
 from pages.landuse import layout_landuse
 from pages.total import layout_total
+from pages.per_capita import layout_per_capita
 
 @app.callback(
     Output('main-content', 'children'),
@@ -19,7 +20,8 @@ def display_page(pathname):
         "/coal": layout_coal,
         "/gas": layout_gas,
         "/oil": layout_oil,
-        "/landuse": layout_landuse
+        "/landuse": layout_landuse,
+        "/per_capita" : layout_per_capita
     }
     layout_func = pages.get(pathname)
     if layout_func:
