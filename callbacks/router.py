@@ -5,7 +5,7 @@ from pages.home import layout_home
 from pages.coal import layout_coal
 from pages.gas import layout_gas
 from pages.oil import layout_oil
-from pages.kuhpups import layout_kuhpups
+from pages.landuse import layout_landuse
 from pages.total import layout_total
 
 @app.callback(
@@ -19,7 +19,7 @@ def display_page(pathname):
         "/coal": layout_coal,
         "/gas": layout_gas,
         "/oil": layout_oil,
-        "/kuhpups": layout_kuhpups
+        "/landuse": layout_landuse
     }
     layout_func = pages.get(pathname)
     if layout_func:
