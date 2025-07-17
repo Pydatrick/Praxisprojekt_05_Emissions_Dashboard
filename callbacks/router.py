@@ -1,6 +1,7 @@
 from dash import Input, Output, html
 from app import app
 
+from pages.home import layout_home
 from pages.coal import layout_coal
 from pages.gas import layout_gas
 from pages.oil import layout_oil
@@ -12,6 +13,7 @@ from pages.kuhpups import layout_kuhpups
 )
 def display_page(pathname):
     pages = {
+        "/" : layout_home,
         "/coal": layout_coal,
         "/gas": layout_gas,
         "/oil": layout_oil,
