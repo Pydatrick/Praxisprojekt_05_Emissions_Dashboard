@@ -9,6 +9,7 @@ import callbacks.gas_plot
 import callbacks.landuse_plot
 import callbacks.oil_plot
 import callbacks.total_plot
+import callbacks.per_capita_plot
 
 app.layout = create_layout()
 

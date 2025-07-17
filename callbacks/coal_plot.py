@@ -54,7 +54,7 @@ def update_graph(selected_entities, year_range):
         color='country',
         color_discrete_map=color_map,
         title=f'CO₂-Emissionen aus Kohle: {", ".join(selected_entities)}',
-        labels={'value': 'CO₂-Emissionen (Tonnen)', 'year' : 'Jahre', 'country' : 'Entität'}
+        labels={'value': 'CO₂-Emissionen [t]', 'year' : 'Jahre', 'country' : 'Entität'}
     )
 
     fig.update_layout(legend_title_text="Entitäten")

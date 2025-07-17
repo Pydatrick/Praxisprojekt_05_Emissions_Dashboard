@@ -53,8 +53,8 @@ def layout_landuse():
             'padding': '10px 50px 50px 50px'
         }),
         html.Div([
-            dcc.Graph(id='graph-3'),
-        ])
+            dcc.Graph(id='landuse-map'),
+        ], style={'margin_left' : 'auto', 'margin_right' : 'auto'})
     ], id='main-content', style={'margin-left': '0', 'transition': 'margin-left 0.3s'})
 
     
